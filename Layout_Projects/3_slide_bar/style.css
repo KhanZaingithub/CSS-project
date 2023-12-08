@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+.main{
+    display: relative;
+    background-image: url("keyboard.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+.slide_bar{
+    position: fixed;
+    height: 100vh;
+    width: 280px;
+    left: -280px;
+    background: rgb(255, 255, 255,0.1);
+    box-shadow: 0 0 6px rgb(255, 255, 255,0.5);
+}
+.main .slide_bar .logo{
+    height: 60px;
+    box-shadow: 0 0 6px rgb(255, 255, 255,0.5);
+    width: 100%;
+    display: flex;
+}
+.main .slide_bar .logo a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+.slide_bar ul{
+    margin-top: 20px;
+    width: 100%;
+    
+}
+.slide_bar ul li{
+    margin-top: 6px;
+    padding: 14px 20px;
+    transition: all 0.3s linear;
+}
+.slide_bar ul li:last-child{
+    margin-bottom: 6px;
+}
+.slide_bar ul li i{
+    font-size: 20px;
+    color: white;
+    padding-right: 10px;
+}
+.slide_bar ul li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.slide_bar ul li:hover{
+    border-left: 1px solid #fff;
+    box-shadow: 0 0 4px rgb(255, 255, 255,0.5);
+}
+.slide_bar .social_media{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 117px;
+}
+.slide_bar .social_media i{
+    font-size: 20px;
+    color: white;
+    padding: 0px 5px;
+    opacity: 0.4;
+    transition: all 0.2s linear;
+}
+.slide_bar .social_media i:hover{
+    opacity: 1;
+}
+.slide_bar .logo .btn_two{
+    align-self: self-start;
+}
+.btn_one i{
+  color: white;
+  font-size: 23px;
+  padding-top: 5px;
+  padding-left: 16px;
+  cursor: pointer;
+}
+.btn_two i{
+    font-size: 20px;
+    cursor: pointer;
+}
+.main .slide_bar .logo .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px 2px;
+}
+.main .slide_bar .logo .left a{
+    padding-left: 15px;
+}
+.main .slide_bar .logo .right i{
+    padding-left: 122px;
+}
+#check{
+    display: none;
+}
+#check:checked ~.slide_bar{
+    left: 0px;
+    transition: all 2s ;
+    margin-top: 0px;
+}
+#check:checked ~.btn_one i{
+    opacity: 0;
+}
